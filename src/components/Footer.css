@@ -1,0 +1,9 @@
+/* src/components/Footer.css */
+.footer {
+    background-color: #212529; /* Dark Bootstrap gray */
+  }
+  .footer a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+  
