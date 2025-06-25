@@ -4,6 +4,20 @@ import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default browser behavior
+    const form = e.target;
+
+    // Send form data using URL encoding
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    })
+      .then(() => setSubmitted(true))
+      .catch((error) => alert(error));
+  };
+
   return (
     <section id="contact" className="py-5 bg-white">
       <Container>
@@ -19,10 +33,9 @@ function Contact() {
                 name="contact"
                 method="POST"
                 data-netlify="true"
-                onSubmit={() => setSubmitted(true)}
+                onSubmit={handleSubmit}
                 className="p-4 border rounded shadow-sm"
               >
-                {/* Hidden input for Netlify */}
                 <input type="hidden" name="form-name" value="contact" />
 
                 <Form.Group className="mb-3" controlId="formName">
