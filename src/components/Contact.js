@@ -22,6 +22,7 @@ function Contact() {
                 onSubmit={() => setSubmitted(true)}
                 className="p-4 border rounded shadow-sm"
               >
+                {/* Hidden input for Netlify */}
                 <input type="hidden" name="form-name" value="contact" />
 
                 <Form.Group className="mb-3" controlId="formName">
