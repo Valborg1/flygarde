@@ -13,7 +13,7 @@ function Header() {
             height="40"
             className="me-2"
           />
-          <span className="fw-bold">Flygarde</span>
+          <span className="fw-bold"></span>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="main-navbar" />
