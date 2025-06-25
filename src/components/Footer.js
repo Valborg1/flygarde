@@ -8,13 +8,13 @@ function Footer() {
     <footer className="footer text-white py-4">
       <Container className="text-center">
         <div className="mb-3">
-          <a href="#" className="text-white me-3">
+          <a href="#home" className="text-white me-3">
             <i className="fab fa-twitter fa-lg"></i>
           </a>
-          <a href="#" className="text-white me-3">
+          <a href="#home" className="text-white me-3">
             <i className="fab fa-linkedin fa-lg"></i>
           </a>
-          <a href="#" className="text-white me-3">
+          <a href="#home" className="text-white me-3">
             <i className="fab fa-facebook fa-lg"></i>
           </a>
         </div>
